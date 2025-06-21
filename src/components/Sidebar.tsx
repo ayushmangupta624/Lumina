@@ -110,7 +110,7 @@ export default function Sidebar(/*{ onCreateSpace }: SidebarProps*/) {
 
       <div className="md:hidden fixed top-0 left-0 right-0 h-16 bg-white/5 backdrop-blur-lg border-b border-white/10 flex items-center justify-between px-4">
         <h1 className="text-xl font-bold text-white">
-          Knowlify
+          Lumina
         </h1>
         <button className="p-2 hover:bg-white/5 rounded-lg">
           <Menu className="w-6 h-6" />
