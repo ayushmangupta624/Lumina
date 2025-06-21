@@ -1,16 +1,16 @@
 export function Stats() {
   const stats = [
     {
+      number: "78%",
+      label: "Students excel with video learning",
+    },
+    {
+      number: "10%",
+      label: "Textbook Retention",
+    },
+    {
       number: "85%",
-      label: "Here goes Stat 1",
-    },
-    {
-      number: "93%",
-      label: "Here goes Stat 2",
-    },
-    {
-      number: "74%",
-      label: "Here goes Stat 3",
+      label: "Video retention",
     },
   ]
 

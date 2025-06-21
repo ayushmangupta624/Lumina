@@ -16,7 +16,7 @@ export function Footer() {
                   style={{ display: 'inline-block', verticalAlign: 'middle' }}
                 />
               </Link>
-              <span className="font-bold text-xl">EduMorph</span>
+              <span className="font-bold text-xl">Lumina</span>
             </div>
             <p className="text-white/60 text-sm text-center md:text-left">
               Turn any document into an AI-powered animated explainer and full learning course instantly.
@@ -69,7 +69,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/5 text-center text-white/40 text-sm">
-          © {new Date().getFullYear()} EduMorph. All rights reserved.
+          © {new Date().getFullYear()} Lumina. All rights reserved.
         </div>
       </div>
     </footer>

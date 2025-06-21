@@ -22,7 +22,7 @@ export function Hero() {
           </h1>
 
           <p className="text-xl text-white/60 max-w-2xl">
-            EduMorph turns textbooks, PDFs, and notes into interactive, multilingual, and engaging learning modules—instantly.
+            Lumina turns textbooks, PDFs, and notes into interactive, multilingual, and engaging learning modules—instantly.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
@@ -48,8 +48,8 @@ export function Hero() {
         <div className="mt-20 relative mx-auto max-w-5xl">
           <div className="aspect-video relative rounded-xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm shadow-2xl shadow-blue-500/5">
             <img
-              src="https://pouch.jumpshare.com/preview/M2sVFcVhtrEJTP3DlTLTKUa93aF1QHb2yQhf70RA1z5oUf8tMdxktuQw11HjbvhbqwPZO93Vxx_GvUbQAfEW_VS2W4grhKO3MNRm3TpdMIM"
-              alt="EduMorph Product Feature"
+              src="https://pouch.jumpshare.com/preview/Q05W2x-PBo8gB12dxg9HM2KbkCBHG1h7tH9xQTr539RwMTl0L2aahQIZfeBi3LAsZ4a2K2yUPK6KQ0bL33za8PByYvZ6xUbRNJcN7NgRE5M"
+              alt="Lumina Product Feature"
               className="rounded-2xl w-full mx-auto"
             />
           </div>

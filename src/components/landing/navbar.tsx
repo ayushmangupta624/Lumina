@@ -12,11 +12,11 @@ export function Navbar() {
                 src="https://miyagilabs.ai/_next/image?url=%2Flogo200.png&w=32&q=75"
                 width={40}
                 height={40}
-                alt="EduMorph logo"
+                alt="Lumina logo"
                 style={{ display: 'inline-block', verticalAlign: 'middle' }}
               />
             </Link>
-            <span className="font-bold text-xl">EduMorph</span>
+            <span className="font-bold text-xl">Lumina</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#how-it-works" className="text-sm text-white/60 hover:text-white transition-colors">
