@@ -1,0 +1,105 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  userId      String              @unique@default(uuid())
+  email       String              @unique 
+  space       Space[]
+  course      Course[]
+  courseProgress CourseProgress[]
+  lessonProgress LessonProgress[]
+}
+
+model Space {
+  spaceId       String      @unique@default(uuid())
+  spaceName     String 
+  createdAt     DateTime    @default(now())
+  userId        String 
+  user          User          @relation(fields: [userId], references: [userId])
+
+}
+
+model Video {
+  videoId       String      @id @default(uuid())
+  title         String
+  prompt        String
+  videoFilePath String?
+  createdAt     DateTime    @default(now())
+  spaceId       String
+  mainContentUrl String?
+}
+
+model Course {
+  courseId      String        @unique@default(uuid())
+  courseName    String        
+  createdAt     DateTime      @default(now())
+  userId        String 
+  user          User          @relation(fields: [userId], references: [userId])
+  lessons       Lesson[]
+  courseProgress CourseProgress[]
+  lessonProgress LessonProgress[]
+}
+
+
+model Coursevideo {
+  videoId        String      @id @default(uuid())
+  title          String
+  videoFilePath  String?
+  courseId       String
+  mainContentUrl String?
+  lessonId       String     @unique
+  lesson         Lesson     @relation(fields: [lessonId], references:[lessonId])
+}
+
+model Lesson {
+  lessonId      String        @id@default(uuid())
+  lessonName    String        
+  courseId      String        
+  course        Course        @relation(fields: [courseId], references: [courseId])
+  video         Coursevideo?
+  progress      LessonProgress[]
+
+@@unique([courseId, lessonId])
+}
+
+model CourseProgress {
+  id          String      @id @default(uuid())
+  userId      String
+  courseId    String
+  user        User        @relation(fields: [userId], references: [userId])
+  course      Course      @relation(fields: [courseId], references: [courseId])
+  completedAt DateTime?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@unique([userId, courseId])
+}
+
+model LessonProgress {
+  id          String      @id @default(uuid())
+  userId      String
+  lessonId    String
+  courseId    String
+  user        User        @relation(fields: [userId], references: [userId])
+  lesson      Lesson      @relation(fields: [lessonId], references: [lessonId])
+  course      Course      @relation(fields: [courseId], references: [courseId])
+  completedAt DateTime?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@unique([userId, lessonId])
+}
