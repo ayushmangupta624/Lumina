@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Lumina
 
-## Getting Started
+Traditional textbooks and lectures often fail to engage, adapt, or explain concepts in a way that resonates with diverse learning styles, leaving students overwhelmed and disengaged.   
 
-First, run the development server:
+Many students face difficulties in understanding complex concepts in subjects such as mathematics, science, and computer science.  Even long video lectures often fall short when students face a specific doubt since they’re too broad, too slow, or lack focus. Today’s students, shaped by short-form content, crave short, engaging, and visually rich content. What better way to reinforce tough academic concepts than with personalized, bite-sized animated explainer videos with voiceovers?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Lumina leverages **Large Language Models** and **advanced Retrieval Augmented Generation** with **semantic search**, **FAISS vector store** and **server-side Manim animation rendering** to **convert an user-uploaded PDF or knowledge base** (for instance, a textbook or lecture notes) and their query about a particular topic to a **highly visual and illustrative animated explainer video with a voiceover** for auditory and visual learning. It also integrates **Web3 (Ethereum)** by using a **Smart Contract to disburse an NFT** upon course completion as a verifiable credential or certificate. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Quizzes:** Quizzes (Multiple Choice Questions and Long Answers) are automatically generated through RAG to help students test their understanding and immediate memory.
+- **Flashcards:** Flashcards are automatically generated through RAG to make memorizing complex subject matter easy. 
+- **AI tutor:** Context-aware AI tutor that students can chat with to clarify concepts. 
+- **NFT-based courses:** While students can create their own videos on Lumina, pre-curated courses are also offered that users can complete to mint a verifiable credit (like a course certification) in the form of an NFT. This gamifies the learning process and provides an incentive for students to learn more.   
+- **Videos with voiceovers:** Unlike other platforms, any animated video generated on Lumina comes with a voiceover to make it truly feel like a lecture.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Tech Stack
 
-## Learn More
+- Frontend: Next.js
+- Backend: Node, Python (FastAPI)
+- Database: Prisma + Postgres
+- Web3: Solidity, Hardhat, Ethers.js, Ethereum (Sepolia Testnet)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> Built in 36 hours at Hack4Bengal 4.0
